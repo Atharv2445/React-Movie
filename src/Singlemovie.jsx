@@ -3,11 +3,16 @@ import MovieInfo from './MovieInfo'
 import Moviecast from './Moviecast'
 import { useParams } from 'react-router'
 import axios from 'axios'
+import { useState } from 'react'
 
 
 export default function Singlemovie() {
     let ansUrl=useParams();
     console.log(ansUrl);
+
+
+    let[record,setrecord]=useState([])
+    let[record1,setrecord1]=useState([]);
 
 
     useEffect(()=>{
@@ -24,7 +29,11 @@ export default function Singlemovie() {
        
     ]).then((res)=>{
 
-          console.log(res);
+          console.log(res[0].value.data);
+          console.log(res[1].value.data.cast);
+
+          setrecord(res[0].value.data);
+          setrecord1(res[1].value.data.cast);
 
 
     }).catch((err)=>{
@@ -43,8 +52,8 @@ export default function Singlemovie() {
   return (
     <div>
               
-                    <MovieInfo/>
-                    <Moviecast/>
+                    <MovieInfo p1={record}/>
+                    <Moviecast p2={record1}/>
          
     </div>
   )
