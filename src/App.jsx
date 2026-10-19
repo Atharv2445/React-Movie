@@ -3,6 +3,8 @@ import Navbar from './Navbar'
 import Content from './Content'
 import Footer from './Footer'
 import { Outlet } from 'react-router';
+import mystore from './redux/mystore';
+import { Provider } from 'react-redux';
 
 function App() {
    //<Content movieName={submittedMovie} />
@@ -11,10 +13,11 @@ function App() {
 
   return (
     <>
-      <Navbar onSearchSubmit={setSubmittedMovie} />
-
-          <Outlet context={submittedMovie}/>
-      <Footer />
+    <Provider store={mystore}>
+              <Navbar onSearchSubmit={setSubmittedMovie} />
+               <Outlet context={submittedMovie}/>
+               <Footer />
+      </Provider>
       </>
   )
 }
