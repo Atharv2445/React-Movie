@@ -1,4 +1,7 @@
 import React from 'react'
+import Image from './Image'
+
+import ErrorBoundary from './Errorboundry'
 
 export default function Moviecast(props) {
   return (
@@ -7,12 +10,15 @@ export default function Moviecast(props) {
 
         <div className='grid gap-3 grid-cols-6'>
         { props.p2 && props.p2.map((val)=>(
-
-            <div>
-                <img src={"https://image.tmdb.org/t/p/w500"+val.profile_path} className='w-full'/>
+           
+         
+          <div>  <ErrorBoundary>
+                 <Image p1={val.profile_path}/>
+                  </ErrorBoundary>
                 <h4>{val.name}</h4>
 
             </div>
+           
 
         )
 
