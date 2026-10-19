@@ -1,4 +1,4 @@
-
+                                                                                                                                
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import Movielist from './Movielist';
@@ -28,12 +28,13 @@ export default function Upcoming() {
     
         },[])
   return (
-    <div>
-             upcoming
-
-             <h1>
-                <Movielist p1={record}/>
-             </h1>
-    </div>
+    <div className='bg-[#151B2B]'>
+         <br />
+           <h1 className='ml-4 mb-5 text-2xl font-semibold racking-wide
+                text-white'>Upcoming Movies</h1>
+           
+           
+           <Movielist p1={record}/>
+       </div>
   )
 }

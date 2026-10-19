@@ -16,6 +16,7 @@ export const searchSlice = createSlice({
     changeMovieName:function(state, action){
 
         console.log('changeMovieName func called');
+        state.movieName=action.payload;
     }
 
   

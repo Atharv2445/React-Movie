@@ -6,6 +6,7 @@ import App from "./App";
 import PageNotfound from "./PageNotfound";
 import Content from "./Content";
 import Singlemovie from "./singlemovie";
+import Searchmovie from "./Searchmovie";
 
 let routeVal=(
   <BrowserRouter>
@@ -17,8 +18,7 @@ let routeVal=(
            <Route path="/popular" element={<Popular/>} />
              <Route path="/upcoming" element={<Upcoming/>} />
               <Route path="/single-movie/:movieid" element={<Singlemovie/>} />
-
-          
+               <Route path="/searchmovie" element={<Searchmovie/>} />
               <Route path="*" element={<PageNotfound/>}/>
       </Route>
              

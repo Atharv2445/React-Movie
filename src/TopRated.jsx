@@ -27,11 +27,14 @@ export default function TopRated() {
     },[])
 
   return (
-    <div>
-          <h2>Top Rated</h2>
-           <Movielist p1={record}/>
-    
-
-    </div>
+   
+     <div className='bg-[#151B2B]'>
+          <br />
+            <h1 className='ml-4 mb-5 text-2xl font-semibold racking-wide
+                 text-white'>Top-Rated Movies</h1>
+            
+            
+            <Movielist p1={record}/>
+        </div>
   )
 }

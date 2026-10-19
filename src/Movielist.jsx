@@ -4,7 +4,8 @@ Link
 
 export default function Movielist(props) {
   return (
-    <div className='grid grid-gap-4 grid-cols-4'>
+    <div className='grid grid-gap-4 grid-cols-4 min-h-screen bg-[#0B0F19] p-6
+             text-slate-50'>
       {
          props.p1 && props.p1.map(val=>(
 

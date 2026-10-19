@@ -31,8 +31,11 @@ export default function Popular() {
 
     
   return (
-    <div>
-        <h1>Popular</h1>
+    <div className='bg-[#151B2B]'>
+      <br />
+        <h1 className='ml-4 mb-5 text-2xl font-semibold racking-wide
+             text-white'>Popular Movies</h1>
+        
         
         <Movielist p1={record}/>
     </div>
